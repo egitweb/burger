@@ -1,38 +1,26 @@
 <div class="container">
-
+{{!-- BANNER --}}
     <div class="jumbotron">
-        <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <h1 class="text-center">Make An Order</h1>
         <br>
-        <h2>Select a Burger or Sandwich</h2>
+        <h2 class="text-center">Enter your burger here</h2>
         <panel>
-            <form class="create-form">
+            <form class="create-form text-center">
                 <div class="form-group">
-                    <label for="newburger">Order Fresh Burger</label>
-                    {{!-- <input type="text" id="newburger" name="burger"> --}}
-                    <select data-placeholder="" id="newburger" name="burger">
-                        <option value="Nothing Selected" selected>Please Select a Sandwich</option>
-                        <option value="Hamburger">Hamburger</option>
-                        <option value="CheeseBurger">CheeseBurger</option>
-                        <option value="DoubleBfChz">Double Up (double meat and cheese)</option>
-                        <option value="VeggieBurger">Veggie Burger</option>
-                        <option value="PulledPork">Pulled Pork Sandwich</option>
-                        <option value="ChichenClub">Chicken Club Sandwich</option>
-                        <option value="SteaknChz">Steak and Cheese Sandwich</option>
-                    </select>
-
+                    <input type="text" id="newburger" name="burger">
                     <button type="submit" class="btn btn-success" id="addburger">
-                        <span class="fa fa-thumbs-up"></span>
+                        <span class="fa fa-arrow-right"></span>
                     </button>
                 </div>
             </form>
         </panel>
     </div>
+   {{!-- CARDS --}}
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
-                    <p>Send order to cashier when ready for pick up</p>
+                <div class="panel-heading" id="leftside"><strong>Your Order</strong>
+                    <p>Review & Pay your order</p>
                 </div>
                 <div class="panel-body">
 
@@ -41,8 +29,8 @@
                         {{#unless devoured}}
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                        <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                        <button type="button" class="eatburger btn btn-success" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-credit-card-alt"></span></button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -54,7 +42,7 @@
         <div class="col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-                    <p>Remove order from pick up when delivered</p>
+                    <p>Let us know you here</p>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -62,14 +50,11 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
                         <hr>
                         {{/if}}
                         {{/each}}
                     </ul>
-
-
-
                 </div>
             </div>
         </div>

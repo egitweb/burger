@@ -1,0 +1,22 @@
+html body {
+    background-color: rgb(49, 49, 49);
+}
+
+.jumbotron {
+background-image: url("https://images.pexels.com/photos/3219483/pexels-photo-3219483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+background-size: cover;
+height: 500px;
+}
+
+.jumbotron h1, p, h2, label {
+    color: white;
+}
+
+#leftside, #rightside{
+    background-color: rgb(168, 168, 168);
+}
+
+.panel-body{
+    background-color: rgb(204, 204, 204);
+}
+
