@@ -40,6 +40,7 @@ router.get("/",function(req, result){
         });
     });
 
+    //DELETE router setup
     router.delete(condition, function(req, result){
         var condition = "id = " + req.params.id;
         console.log("condition", condition);
