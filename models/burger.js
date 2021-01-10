@@ -7,19 +7,19 @@ var burger = {
         });
     },
 
-    POST: function(cols, vals, cb){
+    post: function(cols, vals, cb){
         orm.selectAll("burger", cols, vals, function(result){
             cb(result);
         });
     },
 
-    UPDATE: function(objColVals, condition, cb) {
+    update: function(objColVals, condition, cb) {
         orm.selectAll("burger", objColVals, condition, function(result) {
             cb(result);
     });
     },
 
-    deleteOne: function(condition, cb) {
+    delete: function(condition, cb) {
         orm.selectAll("burger", condition, function(result) {
             cb(result);
         });
