@@ -46,7 +46,7 @@ var orm = {
     },
  
     //POST
-    post: function(table, cols, vals, cb){
+    POST: function(table, cols, vals, cb){
         var dbQuery = "INSERT INTO " +
         table +
         " (" +
@@ -66,7 +66,7 @@ var orm = {
     },
 
     //Update
-    update: function(table, objColVals, condition, cb){
+    UPDATE: function(table, objColVals, condition, cb){
         var dvQuery = 
         "UPDATE " +
         table + 
@@ -85,7 +85,7 @@ var orm = {
     },
 
     //DELETE
-    delete: function(table, condition, cb){
+    DELETE: function(table, condition, cb){
         var dbQuery = 
         "DELETE FROM " +
         table +
